@@ -20,8 +20,19 @@
         <img src="img/111_00734.png" alt="">
     </div>
 
-    <div id="content-3">
-        <img src="img/click_00734.png" alt="">
+    <div id="content-3" style="z-index: 100;">
+        <!-- <img src="img/click_00734.png" alt="" > -->
+        <button style="
+            border: 1px solid #b52a25;
+    background-color: white;
+    padding: 0.5vh 6vh;
+    border-radius: 20px;
+    color: #b52a25;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+         "
+         onclick="test()"
+         > Click here generate</button>
     </div>
 
     <div id="content-4">
@@ -37,13 +48,25 @@
     </div>
 
     <div id="character_input">
-        <input type="text">
+        <input type="text" id="character"/>
     </div>
     <div id="birthday_input">
-        <input type="text">
+        <input type="text" id="birthday"/>
     </div>
-    <div id="cnName_input">
-        <input type="text">
+    <div id="cnName_input" style="z-index: 999;">
+        <input type="text" id="cnName">
     </div>
+    <script>
+        function test(){
+            let content3 = document.getElementById("content-3")
+            let character = document.getElementById("character")
+            let birthday = document.getElementById("birthday")
+
+            let c_val = character.value
+            let b_val = birthday.value
+            let cnName = document.getElementById("cnName")
+            cnName.setAttribute("value",c_val+b_val)
+        }
+    </script>
 </body>
 </html>

@@ -57,7 +57,8 @@ body{
     height: auto;
     min-height: 45vh;
     position: absolute;
-    top: 0vh;
+    top: 40vh;
+    left: 8vh;
 }
 
 #content-3 img{
